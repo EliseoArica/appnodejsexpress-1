@@ -1,0 +1,25 @@
+<table class="table  table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+            <tr>
+                <td scope="row">{{_id}}</td>
+                <td scope="row">{{description}}</td>
+                <td scope="row">{{price}}</td>
+                <td scope="row">{{stock}}</td>
+                <td scope="row">
+                    <a href="articulos/edit/{{_id}}" class="btn btn-success">Editar</a>
+                    <a href="/articulos/delete/{{_id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
